@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  db-multi:
+    image: mysql
+    container_name: spring-boot-backend-apirest
+    environment:
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'user'
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_DATABASE: 'demo'
+    ports:
+      - 3306:3306
+    volumes:
+      - spring-boot-backend-apirest:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - api-network
+  adminer:
+    image: adminer
+    container_name: spring-boot-backend-apirest-adminer
+    environment:
+      ADMINER_DEFAULT_SERVER: spring-boot-backend-apirest
+    ports:
+      - 7000:8080
+    networks:
+      - api-network
+
+volumes:
+  spring-boot-backend-apirest:
+
+networks:
+  api-network:
