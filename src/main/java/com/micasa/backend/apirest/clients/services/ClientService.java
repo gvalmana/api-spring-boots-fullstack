@@ -7,7 +7,7 @@ import org.springframework.data.domain.Pageable;
 
 import com.micasa.backend.apirest.clients.models.entitys.Client;
 
-public interface IClientsService {
+public interface ClientService {
 
 	List<Client> findAll();
 

@@ -10,7 +10,7 @@ import com.micasa.backend.apirest.clients.dao.IRegionsDao;
 import com.micasa.backend.apirest.clients.models.entitys.Region;
 
 @Service
-public class RegionsServiceImpl implements IRegionsService {
+public class RegionsServiceImpl implements RegionsService {
 
 	@Autowired
 	IRegionsDao daoRegions;

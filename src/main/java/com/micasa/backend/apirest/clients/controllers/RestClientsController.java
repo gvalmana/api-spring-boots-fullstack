@@ -33,9 +33,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.micasa.backend.apirest.clients.models.entitys.Client;
 import com.micasa.backend.apirest.clients.models.entitys.Region;
-import com.micasa.backend.apirest.clients.services.IClientsService;
-import com.micasa.backend.apirest.clients.services.IRegionsService;
-import com.micasa.backend.apirest.clients.services.IUploadFileService;
+import com.micasa.backend.apirest.clients.services.ClientService;
+import com.micasa.backend.apirest.clients.services.RegionsService;
+import com.micasa.backend.apirest.clients.services.UploadFileService;
 
 import jakarta.validation.Valid;
 
@@ -45,13 +45,13 @@ import jakarta.validation.Valid;
 public class RestClientsController {
 
 	@Autowired
-	private IClientsService clienteService;
+	private ClientService clienteService;
 
 	@Autowired
-	private IUploadFileService uploadService;
+	private UploadFileService uploadService;
 
 	@Autowired
-	private IRegionsService regionsService;
+	private RegionsService regionsService;
 
 	private final Logger logger = LoggerFactory.getLogger(RestClientsController.class);
 

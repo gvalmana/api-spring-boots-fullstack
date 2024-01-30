@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.micasa.backend.apirest.clients.models.entitys.Region;
 
-public interface IRegionsService {
+public interface RegionsService {
 
 	List<Region> getAll();
 }

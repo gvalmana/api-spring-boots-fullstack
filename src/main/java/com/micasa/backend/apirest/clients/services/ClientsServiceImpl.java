@@ -16,7 +16,7 @@ import com.micasa.backend.apirest.clients.dao.IClientsDao;
 import com.micasa.backend.apirest.clients.models.entitys.Client;
 
 @Service
-public class ClientsServiceImpl implements IClientsService {
+public class ClientsServiceImpl implements ClientService {
 
 	@Autowired
 	private IClientsDao clientsDao;

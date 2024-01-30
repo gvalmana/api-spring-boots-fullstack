@@ -17,7 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.micasa.backend.apirest.commons.shared.FilesNameProcesser;
 
 @Service
-public class UploadFileServiceImp implements IUploadFileService {
+public class UploadFileServiceImp implements UploadFileService {
 
 	private final Logger logger = LoggerFactory.getLogger(UploadFileServiceImp.class);
 	private final String UPLOADS_DIR = "uploads";
