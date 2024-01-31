@@ -10,7 +10,6 @@ public class IndexRestController {
 
 	@GetMapping("/")
 	public String healthcheck() {
-
 		return "Ok, I'm Alive";
 	}
 }

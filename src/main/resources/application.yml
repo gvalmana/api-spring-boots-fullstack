@@ -1,11 +1,15 @@
 spring:
+  security:
+    user:
+      name: admin
+      password: admin
   datasource:
-    url: jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=utf8&createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/clients_demo_app?useUnicode=true&characterEncoding=utf8&createDatabaseIfNotExist=true
     username: root
     password: root
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     show-sql: true
     properties:
       hibernate:
@@ -20,5 +24,6 @@ spring:
 logging:
   level:
     '[org.hibernate.sql]': debug
+
 server:
   port: 8080
